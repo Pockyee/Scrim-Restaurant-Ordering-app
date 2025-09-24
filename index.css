@@ -86,3 +86,62 @@ h6{
     background-color: #f5f5f5;
     border: solid 1.5px #dedede;
 } 
+
+.plus:hover, .plus:focus{
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+/* Payment footer */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* position: fixed; */
+}
+
+footer>h4{
+    padding: 1em;
+}
+
+.orderItem, .orderTotal{
+    display: flex;
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.orderItem h5{
+    margin-left: 1em;
+} 
+
+
+.orderItem h6{
+    margin-left: auto;
+} 
+
+.orderTotal{
+    border-top: 2px black solid;
+    margin-top: 1em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+.orderTotal h6{
+    margin-left: auto;
+} 
+
+.complete {
+    width: 90%;
+    max-width: 500px;
+    background-color: #16DB99;
+    color: white;
+    border: 0;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1em;
+    margin-bottom: 2em;
+}
