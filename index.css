@@ -8,6 +8,7 @@ body {
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
+  /* border: black solid; */
 }
 
 /* Header and Header text */
@@ -113,14 +114,16 @@ footer>h4{
     align-items: center;
 }
 
-.orderItem h5{
-    margin-left: 1em;
-} 
-
-
+.orderItem h4{
+    padding-right: 0.5em;
+}
 .orderItem h6{
-    margin-left: auto;
-} 
+    padding-left: 0.5em;
+}
+
+.orderTotal h4{
+    padding-right: 0.5em;
+}
 
 .orderTotal{
     border-top: 2px black solid;
@@ -129,7 +132,7 @@ footer>h4{
     padding-bottom: 2em;
 }
 
-.orderTotal h6{
+.rightAlign{
     margin-left: auto;
 } 
 
