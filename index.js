@@ -26,7 +26,7 @@ function renderOrder(arr){
         amount>0
         ?    `<div class="orderItem">
                         <h4>${menuArray[id].name}</h4>
-                        <h5 data-rm="${id}">remove</h5>
+                        <h5 class="rm" data-rm="${id}">remove</h5>
                         <h5 class="rightAlign">${amount}x</h5>
                         <h6 >$ ${menuArray[id].price}</h6>
             </div>`
@@ -42,7 +42,7 @@ function renderOrder(arr){
         }, 0);
         return `<div class="orderTotal">
             <h4>Total price:</h4>
-            <h5 data-rmall="0">remove</h5>
+            <h5 class="rm" data-rmall="0">remove</h5>
             <h6 class="rightAlign">$ ${total}</h6>
         </div>
 

@@ -121,6 +121,10 @@ footer>h4{
     padding-left: 0.5em;
 }
 
+.rm {
+    cursor: pointer;
+}
+
 .orderTotal h4{
     padding-right: 0.5em;
 }
