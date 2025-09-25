@@ -4,6 +4,7 @@ let orderArr = [0,0,0,0,0,0]
 
 const menu = document.getElementById('menu')
 const order = document.getElementById('order')
+const credit = document.getElementById('credit')
 
 function renderMenu(){
     menu.innerHTML = menuArray.map((obj)=>`
@@ -46,7 +47,7 @@ function renderOrder(arr){
             <h6 class="rightAlign">$ ${total}</h6>
         </div>
 
-        <button class="complete">
+        <button class="complete" data-pay="0">
             Complete order
         </button>`
     }
@@ -58,15 +59,26 @@ function renderOrder(arr){
     }
 }
 
-
+function renderThanks(){
+    order.innerHTML = `<h4 class="thanks">Thanks, James! Your order is on its way!</h4>`
+}
 
 document.addEventListener('click',function(e){
     if (e.target.dataset.add) {
         orderArr[e.target.dataset.add]+=1
+        renderOrder(orderArr)
     } else if (e.target.dataset.rm) {
         orderArr[e.target.dataset.rm]-=1
+        renderOrder(orderArr)
     } else if (e.target.dataset.rmall) {
         orderArr = [0,0,0,0,0,0]
-    }
-    renderOrder(orderArr)
+        renderOrder(orderArr)
+    } else if (e.target.dataset.pay) {
+        if (e.target.dataset.pay === "0"){
+            credit.style.display = "flex"
+        } else if (e.target.dataset.pay === "1"){
+            credit.style.display = "none"
+            renderThanks()
+        }
+    } 
 })
