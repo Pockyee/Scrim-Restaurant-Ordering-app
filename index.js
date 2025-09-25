@@ -79,6 +79,7 @@ document.addEventListener('click',function(e){
         } else if (e.target.dataset.pay === "1"){
             credit.style.display = "none"
             renderThanks()
+            orderArr = [0,0,0,0,0,0]
         }
     } 
 })
